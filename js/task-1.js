@@ -1,7 +1,6 @@
 function makeTransaction(quantity, pricePerDroid, customerCredits) {
-	const sum = quantity * pricePerDroid
 	return customerCredits - quantity * pricePerDroid >= 0
-		? `You ordered ${quantity} droids worth ${sum} credits!`
+		? `You ordered ${quantity} droids worth ${quantity * pricePerDroid} credits!`
 		: 'Insufficient funds!'
 }
 console.log(makeTransaction(5, 3000, 23000)) // "You ordered 5 droids worth 15000 credits!"
